@@ -5,6 +5,7 @@ as and when the level designers change certain parameters of the game. While des
 neither very easy nor extremely difficult. For this, they have to try out various combinations of monsters, towers, tower positions, the map of the level, etc. As you can imagine, this is a very cumbersome and time-consuming process as there is some amount of trial and error involved. In an effort to help level designers, we provide some estimates, based on some statistical calculations, which tells the level designer how easy or difficult a level is.
 
 What you have to do to make it work on your machine?
+
 1. Update the absolute paths of src/test/resources/aae_TDDesignData.xlsm (not src/main/resources/aae_TDDesignData.xlsm) on your pc in src/java/main/gamepipelab/usc/tdgame/readers/LevelMapReader.java, ReadMonster.java, TowerStatsReader.java, WaveReader.java.
 2. Test: Run the project with a configuration as a java application (Main class: gamepipelab.usc.tdgame.naiveEstimator.DifferenceCalculator) in eclipse. If everything you set is correct, the program should print something looks like: G:161%,A:350% G:60%,A:340% G:100%,A:2868% G:70%,A:3623% G:92%,A:2717% G:70%,A:100%
 3. No worries about the meaning of the output. We gonna figure it out later.
