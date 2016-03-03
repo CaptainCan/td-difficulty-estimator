@@ -2,6 +2,7 @@ package gamepipelab.usc.tdgame.readers;
 
 import gamepipelab.usc.tdgame.entities.Tower;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,8 +18,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class TowerStatsReader
 {
-	private final String excelFilePath = "Z:\\Dropbox\\TD-Re\\td-difficulty-estimator-master\\src\\test\\resources\\aae_TDDesignData.xlsm";
+	//private final String excelFilePath = "C:\\Users\\Mohit\\Documents\\Github\\td-difficulty-estimator\\src\\test\\resources\\aae_TDDesignData.xlsm";
 //	private final String excelFilePath = "../../src/test/resources/aae_TDDesignData.xlsm";
+	public final String excelFilePath = FindExcel.findPath(new File("src/test"));
 	private final String sheetName = "TowerStats";
 	
 	// Map containing key=from, value=to. For eg. <27, 33> means from line 27 to 33 (inclusive), there exists tower definitions.

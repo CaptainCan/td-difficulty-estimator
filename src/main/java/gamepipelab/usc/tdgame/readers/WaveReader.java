@@ -3,6 +3,7 @@ package gamepipelab.usc.tdgame.readers;
 import gamepipelab.usc.tdgame.specs.MiniWave;
 import gamepipelab.usc.tdgame.specs.Wave;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -15,10 +16,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class WaveReader
 {
-	private final String excelFilePath = "Z:\\Dropbox\\TD-Re\\td-difficulty-estimator-master\\src\\test\\resources\\aae_TDDesignData.xlsm";
+	//private final String excelFilePath = "C:\\Users\\Mohit\\Documents\\Github\\td-difficulty-estimator\\src\\test\\resources\\aae_TDDesignData.xlsm";
 //	private final String excelFilePath = "../../src/test/resources/aae_TDDesignData.xlsm";
 	private final String sheetName = "Level1";
-	
+	public final String excelFilePath = FindExcel.findPath(new File("src/test"));
 	// Wave definitions
 	private final int startCol = 14, endCol = 31;
 	private final int startRow = 1, endRow = 6;

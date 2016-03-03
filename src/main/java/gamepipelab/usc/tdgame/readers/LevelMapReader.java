@@ -3,6 +3,7 @@ package gamepipelab.usc.tdgame.readers;
 import gamepipelab.usc.tdgame.specs.LevelMap;
 import gamepipelab.usc.tdgame.specs.MapElements;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,9 +20,11 @@ public class LevelMapReader
 	//private final String excelFilePath = "C:\\Users\\Ashton\\Desktop\\aae_TDDesignData.xlsm";
 //	private final String excelFilePath = "C:\\GoogleDrive\\Courses\\590\\estimator\\td-difficulty-estimator-master\\src\\main\\resources\\aae_TDDesignData.xlsm";
 //	private final String excelFilePath = "../../src/test/resources/aae_TDDesignData.xlsm";
-	private final String excelFilePath = "Z:\\Dropbox\\TD-Re\\td-difficulty-estimator-master\\src\\test\\resources\\aae_TDDesignData.xlsm";
-//	private final String excelFilePath = "/Users/zmt/Documents/USC courses/DR/aae_TDDesignData.xlsm";
-	private final String sheetName = "Level1";
+	//private final String excelFilePath = "C:\\Users\\Mohit\\Documents\\Github\\td-difficulty-estimator\\src\\test\\resources\\aae_TDDesignData.xlsm";
+//	
+	public final String excelFilePath = FindExcel.findPath(new File("src/test"));
+	//private final String excelFilePath = "/Users/zmt/Documents/USC courses/DR/aae_TDDesignData.xlsm";
+	private final String sheetName = "Level2";
 	
 	// Map boundaries
 	private final int startCol = 0, startRow = 0, endCol = 11, endRow = 7;
